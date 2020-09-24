@@ -4,5 +4,12 @@
 </head>
 <body>
 <h1>Hello world</h1>
+<div id="hello"></div>
+
+<script>
+    fetch('/api/HelloWorld')
+        .then(resp => resp.text())
+        .then(data => document.getElementById('hello').innerText = data);
+</script>
 </body>
 </html>
